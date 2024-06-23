@@ -18,7 +18,7 @@ To assist with rapidly packaging and uploading Autodesk custom deployments and p
 * [7-zip](https://www.7-zip.org/download.html) installed. This is required to unpack the Autodesk installers.
 * PowerShell Module [IntuneWin32Apps](https://github.com/MSEndpointMgr/IntuneWin32App) is installed. This is required to package and upload apps to Intune.
 * An app registered in Microsoft Entra Id/Azure AD for the purpose of authentication. See [known issues](#d1ddf0e4-d672-4dae-b554-9d5bdfd93547).
-* Intune Content Prep Tool. This is required to package and upload apps to Intune.
+* [Intune Content Prep Tool](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool) is required to package and upload apps to Intune.
 * [Custom Deployments](https://www.autodesk.com/in/support/download-install/admins/account-deploy/deploy-from-autodesk-account) of type **Deploy** with **Deployment Image Path** set to a fixed local path. E.g. C:\Autodesk\AutoCAD-2024\
 
 > [!TIP]
@@ -51,6 +51,8 @@ Mandatory parameter that specifies the ClientId belonging to the app you registe
 Mandatory parameter that specifies the object id of the testing group. Apps will be assigned with available intent to this group.
 ### DeplymentNamePrefix
 Optional parameter for specifying a prefix to the deployment name.
+### Upload
+Optional parameter the controls whether or not packages are uploaded to Intune.
 
 
 
