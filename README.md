@@ -35,7 +35,7 @@ To assist with rapidly packaging and uploading Autodesk custom deployments and p
 * Create a folder to act as temporary workspace for this tool. The folder must be empty.
 ```PowerShell
 Set-Location -Path <path_to_deploy-autodeskapppackages.ps1_here>
-.\Deploy-AutodeskAppPackages.ps1 -PackageSourcePath C:\Temp\Autodesk\source\ -WorkspacePath C:\Temp\Autodesk\workspace\ -TenantId 'domain.tld' -ClientId "00000000-0000-0000-0000-000000000000" -TestGroupId "00000000-0000-0000-0000-000000000000" -DeploymentNamePrefix "<optional-prefix-for-display-name>"
+.\Deploy-AutodeskAppPackages.ps1 -PackageSourcePath C:\Temp\Autodesk\source\ -WorkspacePath C:\Temp\Autodesk\workspace\ -TenantId 'domain.tld' -ClientId "00000000-0000-0000-0000-000000000000" -TestGroupId "00000000-0000-0000-0000-000000000000" -DeploymentNamePrefix "<optional-prefix-for-display-name>" -Upload
 ```
 
 ## Script Parameters
