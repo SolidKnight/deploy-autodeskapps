@@ -34,8 +34,7 @@ To assist with rapidly packaging and uploading Autodesk custom deployments and p
 * Create a folder and place all the custom deployments and/or product updates in it.
 * Create a folder to act as temporary workspace for this tool. The folder must be empty.
 ```PowerShell
-Set-Location -Path <path_to_deploy-autodeskapppackages.ps1_here>
-.\Deploy-AutodeskAppPackages.ps1 -PackageSourcePath C:\Temp\Autodesk\source\ -WorkspacePath C:\Temp\Autodesk\workspace\ -TenantId 'domain.tld' -ClientId "00000000-0000-0000-0000-000000000000" -TestGroupId "00000000-0000-0000-0000-000000000000" -DeploymentNamePrefix "<optional-prefix-for-display-name>" -Upload
+.\Deploy-AutodeskAppPackages.ps1 -PackageSourcePath 'C:\Temp\Source\' -WorkspacePath 'C:\Temp\Workspace\' -TenantId 'domain.tld' -ClientId "00000000-0000-0000-0000-000000000000" -TestGroupId "00000000-0000-0000-0000-000000000000" -DeploymentNamePrefix "<optional-prefix-for-display-name>" -Upload
 ```
 
 ## Script Parameters
@@ -50,7 +49,7 @@ Mandatory parameter that specifies the ClientId belonging to the app you registe
 ### TestGroupId
 Mandatory parameter that specifies the object id of the testing group. Apps will be assigned with available intent to this group.
 ### DeplymentNamePrefix
-Optional parameter for specifying a prefix to the deployment name.
+Optional parameter for specifying a prefix to the deployment name. There is no delimiter between this prefix and the display name of the app.
 ### Upload
 Optional parameter the controls whether or not packages are uploaded to Intune.
 
